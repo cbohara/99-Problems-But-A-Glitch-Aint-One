@@ -31,7 +31,7 @@ for i in $(cat ${TMP_DIR}/ids_we_want); do
   fi
   filename=$(find ${TMP_DIR}/jhist -type f)
   echo "  Tailing jobhistory log and uploading to ${S3_DEST_DIR}/..."
-  tail -1 ${filename} > ${TMP_DIR}/${EMR_NAME}_${id}_jhist.json
+  zcat < ${filename} | tail -1 > ${TMP_DIR}/${EMR_NAME}_${id}_jhist.json
   aws s3 --profile personal cp ${TMP_DIR}/${EMR_NAME}_${id}_jhist.json ${S3_DEST_DIR}/
   if [ $? != 0 ]; then
     echo "  Error copying tailed log to s3!" 
