@@ -5,7 +5,7 @@
 * Lee Blackwell
 * Michael Farrell
 # Resources
-The following O'Reilly books are sprinkled throughout:
+
 ![alt text](https://i.imgur.com/fawRchq.jpg)
 ---
 ![alt text](https://i.imgur.com/fhgzVEt.jpg)
